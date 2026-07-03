@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stussy | Página Não Encontrada</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <input type="checkbox" id="search-toggle" class="drawer-toggle">
+    <input type="checkbox" id="cart-toggle" class="drawer-toggle">
+
+    <header>
+        <a href="index.html"><img src="logo.png" alt="Stussy Logo" class="logo"></a>
+        <ul class="nav-menu">
+            <li><a href="index.html">INÍCIO</a></li>
+            <li><a href="roupas.html">ROUPAS</a></li>
+            <li><a href="acessorios.html">ACESSÓRIOS</a></li>
+        </ul>
+        <div class="icon-group">
+            <label for="search-toggle" class="icon-link" aria-label="Abrir busca">
+                <img src="lupa.png" alt="Pesquisar" class="nav-icon lupa">
+            </label>
+            <label for="cart-toggle" class="icon-link" aria-label="Abrir carrinho">
+                <img src="carrinho.png" alt="Carrinho" class="nav-icon carrinho">
+            </label>
+        </div>
+    </header>
+
+    <div class="search-overlay">
+        <div class="search-box">
+            <div class="search-input-wrapper">
+                <input type="text" placeholder="BUSCAR STREETWEAR..." class="search-input">
+                <label for="search-toggle" class="close-search">×</label>
+            </div>
+            <div class="quick-results">
+                <h4>ACESSO RÁPIDO:</h4>
+                <div class="quick-tags">
+                    <a href="clothes.html">MOLETONS</a>
+                    <a href="tshirt.html">CAMISETAS</a>
+                    <a href="pants.html">CALÇAS</a>
+                    <a href="accessories.html">BONÉS</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <label for="search-toggle" class="search-backdrop"></label>
+
+    <div class="cart-drawer">
+        <div class="drawer-header">
+            <h2>SEU CARRINHO</h2>
+            <label for="cart-toggle" class="close-btn">×</label>
+        </div>
+        <div class="drawer-content"><!-- Renderizado pelo JS --></div>
+        <div class="drawer-footer">
+            <div class="subtotal">
+                <span>SUBTOTAL:</span>
+                <span>US$ 0.00</span>
+            </div>
+            <button class="btn checkout-btn">FINALIZAR COMPRA</button>
+        </div>
+    </div>
+    <label for="cart-toggle" class="drawer-overlay"></label>
+
+    <div class="marquee-container">
+        <div class="marquee-content">
+            <span>★ STUSSY GLOBAL APPAREL ★ PÁGINA NÃO ENCONTRADA ★ VOLTE PARA A LOJA ★ STUSSY GLOBAL APPAREL ★ PÁGINA NÃO ENCONTRADA ★ VOLTE PARA A LOJA ★</span>
+        </div>
+    </div>
+
+    <div class="not-found">
+        <div class="not-found-code">404</div>
+        <h2>PÁGINA NÃO ENCONTRADA</h2>
+        <p>A página que você procura não existe ou foi movida.<br>Volte para a loja e continue explorando.</p>
+        <a href="index.html" class="not-found-btn">VOLTAR PARA A LOJA</a>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="social">
+                <img src="logo-instagram.png" alt="Instagram" class="social-icon">
+                <p><span class="arroba">@</span>stussy</p>
+            </div>
+            <div class="legal-links">
+                <a href="legal.html">LEGAL</a>
+                <a href="legal-links.html">LINKS LEGAIS</a>
+                <a href="privacy-policy.html">POLÍTICA DE PRIVACIDADE</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="cart.js"></script>
+</body>
+</html>

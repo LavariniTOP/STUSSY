@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stussy | Shoulder Bag</title>
+    <link rel="stylesheet" href="clothes.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <input type="checkbox" id="search-toggle" class="drawer-toggle">
+    <input type="checkbox" id="cart-toggle" class="drawer-toggle">
+
+    <header>
+        <a href="index.html"><img src="logo.png" alt="Stussy Logo" class="logo"></a>
+        <ul class="nav-menu">
+            <li><a href="index.html">INÍCIO</a></li>
+            <li><a href="roupas.html">ROUPAS</a></li>
+            <li><a href="acessorios.html">ACESSÓRIOS</a></li>
+        </ul>
+        <div class="icon-group">
+            <label for="search-toggle" class="icon-link" aria-label="Abrir busca">
+                <img src="lupa.png" alt="Pesquisar" class="nav-icon lupa">
+            </label>
+            <label for="cart-toggle" class="icon-link" aria-label="Abrir carrinho">
+                <img src="carrinho.png" alt="Carrinho" class="nav-icon carrinho">
+            </label>
+        </div>
+    </header>
+
+    <div class="search-overlay">
+        <div class="search-box">
+            <div class="search-input-wrapper">
+                <input type="text" placeholder="BUSCAR STREETWEAR..." class="search-input">
+                <label for="search-toggle" class="close-search">×</label>
+            </div>
+            <div class="quick-results">
+                <h4>ACESSO RÁPIDO:</h4>
+                <div class="quick-tags">
+                    <a href="clothes.html">MOLETONS</a>
+                    <a href="tshirt.html">CAMISETAS</a>
+                    <a href="pants.html">CALÇAS</a>
+                    <a href="accessories.html">BONÉS</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <label for="search-toggle" class="search-backdrop"></label>
+
+    <div class="cart-drawer">
+        <div class="drawer-header">
+            <h2>SEU CARRINHO</h2>
+            <label for="cart-toggle" class="close-btn">×</label>
+        </div>
+        <div class="drawer-content"></div>
+        <div class="drawer-footer">
+            <div class="subtotal">
+                <span>SUBTOTAL:</span>
+                <span>US$ 0.00</span>
+            </div>
+            <button class="btn checkout-btn">FINALIZAR COMPRA</button>
+        </div>
+    </div>
+    <label for="cart-toggle" class="drawer-overlay"></label>
+
+    <div class="marquee-container">
+        <div class="marquee-content">
+            <span>★ STUSSY GLOBAL APPAREL ★ SHOULDER BAG ★ ACESSÓRIO EXCLUSIVO ★ FRETE GRÁTIS ACIMA DE $150 ★ STUSSY GLOBAL APPAREL ★ SHOULDER BAG ★ ACESSÓRIO EXCLUSIVO ★ FRETE GRÁTIS ACIMA DE $150 ★</span>
+        </div>
+    </div>
+
+    <main class="product-container">
+        <section class="product-media">
+            <div class="thumbnails">
+                <img src="bag.jpg" alt="Shoulder Bag - vista frontal">
+                <img src="bag2.jpg" alt="Shoulder Bag - detalhe alça">
+                <img src="bag.jpg" alt="Shoulder Bag - interior" loading="lazy">
+                <img src="bag2.jpg" alt="Shoulder Bag - logo" loading="lazy">
+            </div>
+            <div class="main-image">
+                <div class="carrossel-container">
+                    <div class="slide"><img src="bag.jpg" alt="Shoulder Bag Stussy - frente"></div>
+                    <div class="slide"><img src="bag2.jpg" alt="Shoulder Bag Stussy - detalhe"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="product-sidebar">
+            <div class="product-info">
+                <div class="badge-stock">EM ESTOQUE</div>
+                <h1><span>SHOULDER BAG<br>STUSSY - PRETA</span></h1>
+                <p>Bolsa shoulder bag confeccionada em lona de algodão impermeabilizada. Alça ajustável de comprimento médio, fecho magnético e bolso frontal com zíper. Logo Stussy em relevo.</p>
+                <div class="price">US$ 1,290.00</div>
+                <div class="selector-section">
+                    <label class="selector-label">SELECIONE O TAMANHO</label>
+                    <div class="size-options">
+                        <button class="size-btn active">TAMANHO ÚNICO</button>
+                    </div>
+                </div>
+                <div class="selector-section">
+                    <label class="selector-label">QUANTIDADE</label>
+                    <div class="qty-selector">
+                        <button class="qty-btn" id="qty-minus">-</button>
+                        <span class="qty-value" id="qty-val">1</span>
+                        <button class="qty-btn" id="qty-plus">+</button>
+                    </div>
+                </div>
+                <button class="btn buy-btn">ADICIONAR AO CARRINHO</button>
+                <div class="product-details-list">
+                    <div class="detail-item">★ LONA DE ALGODÃO IMPERMEABILIZADA</div>
+                    <div class="detail-item">★ ALÇA AJUSTÁVEL</div>
+                    <div class="detail-item">★ FECHO MAGNÉTICO + BOLSO COM ZÍPER</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="thumbnails-bottom">
+            <img src="bag-removebg-preview.png" class="hoodie" alt="Shoulder Bag Stussy - flat lay" loading="lazy">
+            <div class="banner-badge">★ ACESSÓRIOS STREETWEAR ★ DROP EXCLUSIVO 2026 ★</div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="social">
+                <img src="logo-instagram.png" alt="Instagram" class="social-icon">
+                <p><span class="arroba">@</span>stussy</p>
+            </div>
+            <div class="legal-links">
+                <a href="legal.html">LEGAL</a>
+                <a href="legal-links.html">LINKS LEGAIS</a>
+                <a href="privacy-policy.html">POLÍTICA DE PRIVACIDADE</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="cart.js"></script>
+    <script>
+        const minusBtn = document.getElementById('qty-minus');
+        const plusBtn = document.getElementById('qty-plus');
+        const qtyVal = document.getElementById('qty-val');
+        if (minusBtn && plusBtn && qtyVal) {
+            minusBtn.addEventListener('click', () => {
+                let val = parseInt(qtyVal.textContent);
+                if (val > 1) qtyVal.textContent = val - 1;
+            });
+            plusBtn.addEventListener('click', () => {
+                let val = parseInt(qtyVal.textContent);
+                qtyVal.textContent = val + 1;
+            });
+        }
+        const thumbnails = document.querySelectorAll('.thumbnails img');
+        const slides = document.querySelectorAll('.slide');
+        thumbnails.forEach((thumb, idx) => {
+            thumb.addEventListener('click', () => {
+                thumbnails.forEach(t => t.classList.remove('active-thumb'));
+                thumb.classList.add('active-thumb');
+                slides.forEach(slide => {
+                    slide.style.animation = 'none';
+                    slide.style.opacity = '0';
+                    slide.style.zIndex = '1';
+                });
+                const slideIndex = idx % slides.length;
+                slides[slideIndex].style.opacity = '1';
+                slides[slideIndex].style.zIndex = '2';
+            });
+        });
+        if (thumbnails.length > 0) thumbnails[0].classList.add('active-thumb');
+    </script>
+</body>
+</html>

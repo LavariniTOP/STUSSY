@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stussy | Finalizar Compra</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <input type="checkbox" id="search-toggle" class="drawer-toggle">
+    <input type="checkbox" id="cart-toggle" class="drawer-toggle">
+
+    <header>
+        <a href="index.html"><img src="logo.png" alt="Stussy Logo" class="logo"></a>
+        <ul class="nav-menu">
+            <li><a href="index.html">INÍCIO</a></li>
+            <li><a href="roupas.html">ROUPAS</a></li>
+            <li><a href="acessorios.html">ACESSÓRIOS</a></li>
+        </ul>
+        <div class="icon-group">
+            <label for="search-toggle" class="icon-link" aria-label="Abrir busca">
+                <img src="lupa.png" alt="Pesquisar" class="nav-icon lupa">
+            </label>
+            <label for="cart-toggle" class="icon-link" aria-label="Abrir carrinho">
+                <img src="carrinho.png" alt="Carrinho" class="nav-icon carrinho">
+            </label>
+        </div>
+    </header>
+
+    <div class="search-overlay">
+        <div class="search-box">
+            <div class="search-input-wrapper">
+                <input type="text" placeholder="BUSCAR STREETWEAR..." class="search-input">
+                <label for="search-toggle" class="close-search">×</label>
+            </div>
+            <div class="quick-results">
+                <h4>ACESSO RÁPIDO:</h4>
+                <div class="quick-tags">
+                    <a href="clothes.html">MOLETONS</a>
+                    <a href="tshirt.html">CAMISETAS</a>
+                    <a href="pants.html">CALÇAS</a>
+                    <a href="accessories.html">BONÉS</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <label for="search-toggle" class="search-backdrop"></label>
+
+    <div class="cart-drawer">
+        <div class="drawer-header">
+            <h2>SEU CARRINHO</h2>
+            <label for="cart-toggle" class="close-btn">×</label>
+        </div>
+        <div class="drawer-content"><!-- Renderizado pelo JS --></div>
+        <div class="drawer-footer">
+            <div class="subtotal">
+                <span>SUBTOTAL:</span>
+                <span>US$ 0.00</span>
+            </div>
+            <button class="btn checkout-btn">FINALIZAR COMPRA</button>
+        </div>
+    </div>
+    <label for="cart-toggle" class="drawer-overlay"></label>
+
+    <div class="marquee-container">
+        <div class="marquee-content">
+            <span>★ STUSSY GLOBAL APPAREL ★ FINALIZANDO SUA COMPRA ★ PAGAMENTO SEGURO ★ FRETE GRÁTIS ACIMA DE $150 ★ STUSSY GLOBAL APPAREL ★ FINALIZANDO SUA COMPRA ★ PAGAMENTO SEGURO ★</span>
+        </div>
+    </div>
+
+    <!-- Tela de Sucesso (escondida até confirmar pedido) -->
+    <div class="checkout-success" id="success-screen">
+        <div class="success-icon">★</div>
+        <div class="success-title">PEDIDO CONFIRMADO!</div>
+        <p class="success-msg">Seu pedido foi recebido com sucesso. Em breve você receberá um e-mail de confirmação com os detalhes da sua compra.</p>
+        <a href="index.html" class="success-back">VOLTAR PARA A LOJA</a>
+    </div>
+
+    <!-- Formulário de Checkout -->
+    <div class="checkout-page" id="checkout-form-wrapper">
+
+        <!-- Coluna esquerda: formulário -->
+        <div class="checkout-form-section">
+
+            <!-- Dados Pessoais -->
+            <div class="checkout-block">
+                <span class="checkout-block-title">DADOS PESSOAIS</span>
+                <div class="form-row full">
+                    <div class="form-group">
+                        <label for="nome">NOME COMPLETO</label>
+                        <input type="text" id="nome" placeholder="Seu nome completo">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">E-MAIL</label>
+                        <input type="email" id="email" placeholder="seu@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="tel">TELEFONE</label>
+                        <input type="tel" id="tel" placeholder="(00) 00000-0000">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Endereço -->
+            <div class="checkout-block">
+                <span class="checkout-block-title">ENDEREÇO DE ENTREGA</span>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="cep">CEP</label>
+                        <input type="text" id="cep" placeholder="00000-000">
+                    </div>
+                    <div class="form-group">
+                        <label for="estado">ESTADO</label>
+                        <select id="estado">
+                            <option value="">Selecione...</option>
+                            <option>AC</option><option>AL</option><option>AM</option>
+                            <option>BA</option><option>CE</option><option>DF</option>
+                            <option>ES</option><option>GO</option><option>MA</option>
+                            <option>MG</option><option>MS</option><option>MT</option>
+                            <option>PA</option><option>PB</option><option>PE</option>
+                            <option>PI</option><option>PR</option><option>RJ</option>
+                            <option>RN</option><option>RO</option><option>RR</option>
+                            <option>RS</option><option>SC</option><option selected>SP</option>
+                            <option>SE</option><option>TO</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row full">
+                    <div class="form-group">
+                        <label for="rua">RUA / AVENIDA</label>
+                        <input type="text" id="rua" placeholder="Nome da rua">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="numero">NÚMERO</label>
+                        <input type="text" id="numero" placeholder="123">
+                    </div>
+                    <div class="form-group">
+                        <label for="complemento">COMPLEMENTO</label>
+                        <input type="text" id="complemento" placeholder="Apto, bloco...">
+                    </div>
+                </div>
+                <div class="form-row full">
+                    <div class="form-group">
+                        <label for="cidade">CIDADE</label>
+                        <input type="text" id="cidade" placeholder="Sua cidade">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagamento -->
+            <div class="checkout-block">
+                <span class="checkout-block-title">FORMA DE PAGAMENTO</span>
+
+                <div class="payment-tabs">
+                    <button class="pay-tab active" data-tab="cartao">CARTÃO</button>
+                    <button class="pay-tab" data-tab="pix">PIX</button>
+                </div>
+
+                <!-- Cartão -->
+                <div class="payment-panel active" id="panel-cartao">
+                    <div class="form-row full">
+                        <div class="form-group">
+                            <label for="num-cartao">NÚMERO DO CARTÃO</label>
+                            <input type="text" id="num-cartao" placeholder="0000 0000 0000 0000" maxlength="19">
+                        </div>
+                    </div>
+                    <div class="form-row full">
+                        <div class="form-group">
+                            <label for="nome-cartao">NOME NO CARTÃO</label>
+                            <input type="text" id="nome-cartao" placeholder="Como está no cartão">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="validade">VALIDADE</label>
+                            <input type="text" id="validade" placeholder="MM/AA" maxlength="5">
+                        </div>
+                        <div class="form-group">
+                            <label for="cvv">CVV</label>
+                            <input type="text" id="cvv" placeholder="000" maxlength="4">
+                        </div>
+                    </div>
+                    <div class="form-row full">
+                        <div class="form-group">
+                            <label for="parcelas">PARCELAS</label>
+                            <select id="parcelas">
+                                <option>1x sem juros</option>
+                                <option>2x sem juros</option>
+                                <option>3x sem juros</option>
+                                <option>6x sem juros</option>
+                                <option>12x com juros</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PIX -->
+                <div class="payment-panel" id="panel-pix">
+                    <div class="pix-box">
+                        <div class="pix-qr">QR CODE<br>PIX</div>
+                        <p style="font-size:14px; font-weight:700; color:#555;">Escaneie o QR code com seu app bancário</p>
+                        <div class="pix-key">stussy@pagamento.com.br</div>
+                        <p style="font-size:13px; font-weight:700; color:#8F28AC;">★ 10% de desconto pagando via PIX ★</p>
+                    </div>
+                </div>
+            </div>
+
+            <button class="confirm-btn" id="confirm-btn">CONFIRMAR PEDIDO ★</button>
+        </div>
+
+        <!-- Coluna direita: resumo -->
+        <aside class="checkout-summary">
+            <div class="summary-header">RESUMO DO PEDIDO</div>
+            <div class="summary-items" id="summary-items">
+                <div class="summary-empty">Carrinho vazio</div>
+            </div>
+            <div class="summary-totals">
+                <div class="summary-line">
+                    <span>SUBTOTAL</span>
+                    <span class="val" id="summary-subtotal">US$ 0.00</span>
+                </div>
+                <div class="summary-line shipping">
+                    <span>FRETE</span>
+                    <span class="val" id="summary-frete">—</span>
+                </div>
+                <div class="summary-line total">
+                    <span>TOTAL</span>
+                    <span class="val" id="summary-total">US$ 0.00</span>
+                </div>
+            </div>
+        </aside>
+
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="social">
+                <img src="logo-instagram.png" alt="Instagram" class="social-icon">
+                <p><span class="arroba">@</span>stussy</p>
+            </div>
+            <div class="legal-links">
+                <a href="legal.html">LEGAL</a>
+                <a href="legal-links.html">LINKS LEGAIS</a>
+                <a href="privacy-policy.html">POLÍTICA DE PRIVACIDADE</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="cart.js"></script>
+    <script>
+        // Carregar resumo do carrinho
+        function loadSummary() {
+            let cart = [];
+            try {
+                cart = JSON.parse(localStorage.getItem('stussy_cart')) || [];
+            } catch (e) {}
+
+            const itemsEl = document.getElementById('summary-items');
+            const subtotalEl = document.getElementById('summary-subtotal');
+            const freteEl = document.getElementById('summary-frete');
+            const totalEl = document.getElementById('summary-total');
+
+            if (cart.length === 0) {
+                itemsEl.innerHTML = '<div class="summary-empty">Adicione produtos ao carrinho para continuar</div>';
+                return;
+            }
+
+            itemsEl.innerHTML = cart.map(item => `
+                <div class="summary-item">
+                    <img src="${item.image}" alt="${item.name}">
+                    <div class="summary-item-info">
+                        <span class="summary-item-name">${item.name}</span>
+                        <span class="summary-item-meta">TAM: ${item.size} | QTD: ${item.qty}</span>
+                    </div>
+                    <span class="summary-item-price">US$ ${(item.price * item.qty).toLocaleString('en-US', { minimumFractionDigits: 2 })}</span>
+                </div>
+            `).join('');
+
+            const subtotal = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
+            const frete = subtotal >= 150 ? 0 : 29.90;
+            const total = subtotal + frete;
+
+            subtotalEl.textContent = 'US$ ' + subtotal.toLocaleString('en-US', { minimumFractionDigits: 2 });
+            freteEl.textContent = frete === 0 ? 'GRÁTIS' : 'US$ ' + frete.toFixed(2);
+            freteEl.style.color = frete === 0 ? '#49a86a' : '#0c080d';
+            totalEl.textContent = 'US$ ' + total.toLocaleString('en-US', { minimumFractionDigits: 2 });
+        }
+
+        loadSummary();
+
+        // Tabs de pagamento
+        const tabs = document.querySelectorAll('.pay-tab');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+
+                document.querySelectorAll('.payment-panel').forEach(p => p.classList.remove('active'));
+                document.getElementById('panel-' + tab.dataset.tab).classList.add('active');
+            });
+        });
+
+        // Máscara simples para cartão
+        const cardInput = document.getElementById('num-cartao');
+        if (cardInput) {
+            cardInput.addEventListener('input', () => {
+                let val = cardInput.value.replace(/\D/g, '').slice(0, 16);
+                cardInput.value = val.replace(/(.{4})/g, '$1 ').trim();
+            });
+        }
+
+        const validadeInput = document.getElementById('validade');
+        if (validadeInput) {
+            validadeInput.addEventListener('input', () => {
+                let val = validadeInput.value.replace(/\D/g, '').slice(0, 4);
+                if (val.length >= 3) val = val.slice(0, 2) + '/' + val.slice(2);
+                validadeInput.value = val;
+            });
+        }
+
+        // Confirmar pedido
+        document.getElementById('confirm-btn').addEventListener('click', () => {
+            const nome = document.getElementById('nome').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const cep = document.getElementById('cep').value.trim();
+            const rua = document.getElementById('rua').value.trim();
+            const cidade = document.getElementById('cidade').value.trim();
+
+            if (!nome || !email || !cep || !rua || !cidade) {
+                alert('Preencha todos os campos obrigatórios antes de confirmar.');
+                return;
+            }
+
+            // Limpar carrinho
+            localStorage.removeItem('stussy_cart');
+
+            // Mostrar tela de sucesso
+            document.getElementById('checkout-form-wrapper').style.display = 'none';
+            const success = document.getElementById('success-screen');
+            success.classList.add('visible');
+            success.scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>

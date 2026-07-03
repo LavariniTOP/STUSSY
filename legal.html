@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Termos Legais - Stussy</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <input type="checkbox" id="search-toggle" class="drawer-toggle">
+    <input type="checkbox" id="cart-toggle" class="drawer-toggle">
+
+    <header>
+        <a href="index.html"><img src="logo.png" alt="Stussy Logo" class="logo"></a>
+
+        <ul class="nav-menu">
+            <li><a href="index.html">INÍCIO</a></li>
+            <li><a href="clothes.html">ROUPAS</a></li>
+            <li><a href="accessories.html">ACESSÓRIOS</a></li>
+        </ul>
+
+        <div class="icon-group">
+            <label for="search-toggle" class="icon-link">
+                <img src="lupa.png" alt="Pesquisar" class="nav-icon lupa">
+            </label>
+            <label for="cart-toggle" class="icon-link">
+                <img src="carrinho.png" alt="Carrinho" class="nav-icon carrinho">
+            </label>
+        </div>
+    </header>
+
+    <!-- Search Overlay Dropdown -->
+    <div class="search-overlay">
+        <div class="search-box">
+            <div class="search-input-wrapper">
+                <input type="text" placeholder="BUSCAR STREETWEAR..." class="search-input">
+                <label for="search-toggle" class="close-search">×</label>
+            </div>
+            <div class="quick-results">
+                <h4>ACESSO RÁPIDO:</h4>
+                <div class="quick-tags">
+                    <a href="clothes.html">MOLETONS</a>
+                    <a href="accessories.html">BONÉS</a>
+                    <a href="#">NOVIDADES</a>
+                    <a href="#">MAIS VENDIDOS</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <label for="search-toggle" class="search-backdrop"></label>
+
+    <!-- Cart Sidebar Drawer -->
+    <div class="cart-drawer">
+        <div class="drawer-header">
+            <h2>SEU CARRINHO</h2>
+            <label for="cart-toggle" class="close-btn">×</label>
+        </div>
+        <div class="drawer-content">
+            <!-- Rendered by JS -->
+        </div>
+        <div class="drawer-footer">
+            <div class="subtotal">
+                <span>SUBTOTAL:</span>
+                <span>US$ 0.00</span>
+            </div>
+            <button class="btn checkout-btn">FINALIZAR COMPRA</button>
+        </div>
+    </div>
+    <label for="cart-toggle" class="drawer-overlay"></label>
+
+    <div class="marquee-container">
+        <div class="marquee-content">
+            <span>★ STUSSY BRASIL ★ INFORMAÇÕES LEGAIS ★ TERMOS DE USO ★ STUSSY BRASIL ★ INFORMAÇÕES LEGAIS ★ TERMOS DE USO ★</span>
+        </div>
+    </div>
+
+    <main class="info-container">
+        <div class="info-box">
+            <h1>INFORMAÇÕES LEGAIS</h1>
+            <p>Bem-vindo à página de termos e informações legais da Stussy Brasil. Ao navegar e comprar em nosso site, você concorda com as diretrizes e regras especificadas abaixo.</p>
+            
+            <h2>1. PROPRIEDADE INTELECTUAL</h2>
+            <p>Todo o conteúdo deste site, incluindo o design neobrutalista, logotipos, imagens de produtos (como moletons, camisetas e bonés), textos e códigos-fonte, são de propriedade exclusiva da Stussy Brasil ou de seus licenciadores, sendo protegidos pelas leis de direitos autorais vigentes no país.</p>
+
+            <h2>2. TERMOS DE USO</h2>
+            <p>O uso deste site é destinado para fins pessoais e comerciais legítimos de compra de vestuário streetwear. É terminantemente proibida a cópia, republicação ou engenharia reversa das tecnologias presentes neste ambiente sem prévio consentimento.</p>
+
+            <h2>3. DETALHES CORPORATIVOS</h2>
+            <p>Stussy Brasil Vestuários LTDA.<br>CNPJ fictício: 12.345.678/0001-99<br>Endereço: Avenida Paulista, 1000 - São Paulo, SP.</p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="social">
+                <img src="logo-instagram.png" alt="Instagram" class="social-icon">
+                <p><span class="arroba">@</span>stussy</p>
+            </div>
+            <div class="legal-links">
+                <a href="legal.html">LEGAL</a>
+                <a href="legal-links.html">LINKS LEGAIS</a>
+                <a href="privacy-policy.html">POLÍTICA DE PRIVACIDADE</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="cart.js"></script>
+</body>
+</html>
